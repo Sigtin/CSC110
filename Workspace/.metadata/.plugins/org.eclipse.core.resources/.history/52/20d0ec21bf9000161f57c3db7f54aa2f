@@ -1,0 +1,9 @@
+package exercises;
+
+public class Driver {
+
+	//Manually declare the main method
+	public static void main(String[] args){
+		
+	}
+}

@@ -1,0 +1,15 @@
+package exercises;
+
+public class DataTypeAnalyzer {
+
+	public static void run(){
+		
+	}
+	
+	public static void analyze(){
+		
+	}
+	
+	
+	
+}

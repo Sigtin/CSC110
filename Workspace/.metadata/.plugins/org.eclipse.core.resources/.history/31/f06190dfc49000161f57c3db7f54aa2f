@@ -1,0 +1,30 @@
+package exercises;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class DataTypeAnalyzer {
+
+	public static long run() throws IOException{
+		
+		BufferedReader readRacer = new BufferedReader(new InputStreamReader(System.in));
+		System.out.print("Please enter a number: ");
+		String userInput = readRacer.readLine();
+		long num = Long.parseLong(userInput);
+		return
+	}
+	
+	public static void analyze(long num){
+		if(num >= Byte.MIN_VALUE && num <= Byte.MAX_VALUE){
+			System.out.println("The smallest data type that can hold this value is a byte");
+		}else if(num >= Short.MIN_VALUE && num <= Short.MAX_VALUE){
+			System.out.println();
+		}
+	}
+	
+	public static void report(){
+		analyze();
+	}
+	
+}
