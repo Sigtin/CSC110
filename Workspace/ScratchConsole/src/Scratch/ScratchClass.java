@@ -1,10 +1,38 @@
 package Scratch;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class ScratchClass {
-
-	public static void main(String[] args) throws IOException{
+	
+	private static BufferedReader readRacer = new BufferedReader(new InputStreamReader(System.in));
+	
+	public static void run(){
+//		Print to the console the sum of 10 random numbers between 1 and 100 inclusive
+//		Random randAlThor = new Random();
+//		UpperBound = High - Low + 1
+//		nextInt(UpperBound) + Low
+//		int randomNum = 0;
+//		for(int i = 0; i < 10; i++){
+//			randomNum += randAlThor.nextInt(100)+1;
+//		}
+//		System.out.println(randomNum);
+		
+		//Prompt the user for a number
+		
+		try{
+			System.out.print("Please, enter your favorite number: ");
+			String input = readRacer.readLine();
+		}catch(IOException ioe){
+			
+		}catch(NumberFormatException nfe){
+			
+		}
+	}
+	public static void main(String[] args){
+		run();
+		
 		/*
 		 * Data types
 		 * 
@@ -40,5 +68,7 @@ public class ScratchClass {
 		//1. Compiler errors
 		//2. Runtime errors
 		//3. Logical errors
+		
+		
 	 }
 }

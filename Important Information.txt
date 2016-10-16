@@ -1,0 +1,7 @@
+How to use return
+How to use the "random" class
+How to make multiple "difficulty" levels
+How to keep the remaining number of attempts on screen at all times
+How to keep track of numbers already guessed
+How to declare results of the game
+How to use arrays

@@ -18,7 +18,7 @@ public class DataTypeAnalyzer {
 	public static void analyze(long num) throws IOException{
 		if(num >= Byte.MIN_VALUE && num <= Byte.MAX_VALUE){
 			System.out.println("The smallest data type that can hold this value is a byte");
-		}else if(num >= Short.MIN_VALUE && num <= Short.MAX_VALUE && num <= Byte.MIN_VALUE && num >= Byte.MAX_VALUE){
+		}else if(num >= Short.MIN_VALUE && num <= Short.MAX_VALUE){
 			System.out.println("The smallest data type that can hold this value is a short");
 		}else if(num >= Integer.MIN_VALUE && num <= Integer.MAX_VALUE && num >= Short.MIN_VALUE && num <= Short.MAX_VALUE && num <= Byte.MIN_VALUE && num >= Byte.MAX_VALUE ){
 			System.out.println("The smallest data type that can hold this value is an int");
