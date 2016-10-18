@@ -8,6 +8,11 @@ public class ScratchClass {
 	
 	private static BufferedReader readRacer = new BufferedReader(new InputStreamReader(System.in));
 	
+	public static byte[] demoMethod(Object[] objs){
+		byte[] retVal = new byte[10];
+		return retVal;
+	}
+	
 	public static void run() throws IOException{
 //		Print to the console the sum of 10 random numbers between 1 and 100 inclusive
 //		Random randAlThor = new Random();

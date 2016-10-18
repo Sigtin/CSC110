@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 
 public class Calculator {
 
+	private static int age;
+	
 	public static void main(String[] args) throws IOException {
 		BufferedReader readRacer = new BufferedReader(new InputStreamReader(System.in));
 		boolean isLooping = false;
@@ -185,7 +187,11 @@ public class Calculator {
 			break;
 		}
 		
-		int age = year - birthYear;
+		if(birthMonth > month){
+			age = year - birthYear - 1;
+		}else{
+			age = year - birthYear;
+		}
 		
 		System.out.println("You are " + age + " years old");
 		
