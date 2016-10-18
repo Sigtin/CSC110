@@ -8,7 +8,7 @@ public class ScratchClass {
 	
 	private static BufferedReader readRacer = new BufferedReader(new InputStreamReader(System.in));
 	
-	public static void run(){
+	public static void run() throws IOException{
 //		Print to the console the sum of 10 random numbers between 1 and 100 inclusive
 //		Random randAlThor = new Random();
 //		UpperBound = High - Low + 1
@@ -19,18 +19,26 @@ public class ScratchClass {
 //		}
 //		System.out.println(randomNum);
 		
-		//Prompt the user for a number
+		//Prompt the user for the size of the array
+		//Declare and initialize the array to the size specified by the user
 		
-		try{
-			System.out.print("Please, enter your favorite number: ");
-			String input = readRacer.readLine();
-		}catch(IOException ioe){
-			
-		}catch(NumberFormatException nfe){
-			
+		int[] nums = new int[5];
+		
+		nums[3] = 9801;
+		nums[4] = 5025;
+		nums[2] = 4;
+		
+		nums[0] = nums[4];
+		
+		//Write a for loop that populates the array so that each "bucket"
+			//contains multiples of 5 (starting at 5)
+		
+//		for(int i = 0; i < nums.length; i++){
+//			nums[i] = (i+1)*5;
+//			System.out.println(i);
 		}
-	}
-	public static void main(String[] args){
+		
+	public static void main(String[] args) throws IOException{
 		run();
 		
 		/*
