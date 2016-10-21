@@ -1,0 +1,35 @@
+package random;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Random;
+
+public class App {
+	private static BufferedReader readRacer = new BufferedReader(new InputStreamReader(System.in));
+	private static Random randAlThor;
+	public static String prompt() throws IOException{
+		System.out.println("Welcome to the Number Guessing Game");
+		
+		System.out.println("To play on easy, press 1");
+		System.out.println("To play on medium, press 2");
+		System.out.println("To play on hard, press 3");
+			String userInput = readRacer.readLine();
+			
+		return userInput;
+	}
+	
+	public static void difficulty(String userInput){
+		int input = Integer.parseInt(userInput);
+		switch(input){
+		
+		case 1:
+			randAlThor = new Random();
+			int randomNum = randAlThor.nextInt(10)+1;
+			int[] array = new int[randomNum];
+			
+			
+		}
+	}
+	
+}
