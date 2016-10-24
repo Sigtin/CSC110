@@ -10,7 +10,6 @@ public class Application {
 	private static BufferedReader readRacer = new BufferedReader(new InputStreamReader(System.in));
 	private static int input;
 	private static Random rand;
-	private static int[] data;
 	public static String prompt() {
 		String userInput = "";
 		// Prompt the user for the number of dice to roll
