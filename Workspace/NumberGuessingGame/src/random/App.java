@@ -67,13 +67,19 @@ public class App {
 						String userInput = readRacer.readLine();
 						input = Integer.parseInt(userInput);
 						isValid = true;
+						if (input > x || input < 1) {
+							System.out.println("Your input was invalid");
+							isValid = false;
+						}else{
 						for (int i = 0; i < numsGuessed.length; i++) {
 							if (numsGuessed[i] == input) {
 								System.out.println("You already guessed that number");
 								System.out.print("Please enter a different number between 1 and " + x + ": ");
 								isValid = false;
-							}
+							} 
 						}
+						}
+						
 					} catch (Exception e) {
 						System.out.println("Your entry was invalid");
 						isValid = false;
@@ -91,15 +97,15 @@ public class App {
 				} else if (input < randomNum) {
 					System.out.println("Your guess was too low");
 					guessesLeft = guessesLeft - 1;
-					guessesMade = guessesMade + 1;
 					numsGuessed[guessesMade] = input;
+					guessesMade = guessesMade + 1;
 					System.out.println("You've made " + guessesMade + " guesses so far");
 					System.out.println("You have " + guessesLeft + " guesses left");
 				} else {
 					System.out.println("Your guess was too high");
 					guessesLeft = guessesLeft - 1;
-					guessesMade = guessesMade + 1;
 					numsGuessed[guessesMade] = input;
+					guessesMade = guessesMade + 1;
 					System.out.println("You've made " + guessesMade + " guesses so far");
 					System.out.println("You have " + guessesLeft + " guesses left");
 				}
@@ -147,8 +153,18 @@ public class App {
 	}
 
 	public static void run() {
+		boolean isValid = true;
+		do {
 		int input = prompt();
-		difficulty(input);
+
+			if (input > 3 || input < 1) {
+				System.out.println("Your input was invalid");
+				isValid = false;
+			} else {
+				difficulty(input);
+				isValid = true;
+			}
+		} while (!isValid);
 	}
 
 }

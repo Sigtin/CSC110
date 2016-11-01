@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>20</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>440</y>
+      <w>220</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+DieType
+--
+RED,
+YELLOW,
+GREEN</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>440</y>
+      <w>780</w>
+      <h>440</h>
+    </coordinates>
+    <panel_attributes>Die
+--
+_- numOfSides : int_ &lt;&lt;const&gt;&gt;_
+- color : DieType &lt;&lt;const&gt;&gt;
+- currentDieFace : DieFace
+
+--
++ Die(color : DieType) &lt;&lt;ctor&gt;&gt;
+_+ getNumOfSides() : int_
++ getColor() : DieType
++ getCurrentDieFace() : DieFace
++ setCurrentDieFace(currentDieFace : DieFace) : void
++ rollDie() ; DieFace
++ toString() : String &lt;&lt;Override&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>940</x>
+      <y>920</y>
+      <w>240</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Player
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1220</x>
+      <y>920</y>
+      <w>380</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Driver
+--
+
+--
+_+main(args : String[]) : void_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>920</y>
+      <w>240</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Cup
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>920</y>
+      <w>240</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>GameLogic
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>680</y>
+      <w>220</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+DieFace
+--
+BLAST,
+ESCAPE,
+BRAIN</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>500</x>
+      <y>440</y>
+      <w>180</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>500</x>
+      <y>740</y>
+      <w>180</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

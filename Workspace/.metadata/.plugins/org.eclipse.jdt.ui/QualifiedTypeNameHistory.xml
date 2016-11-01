@@ -4,4 +4,11 @@
 <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
 <fullyQualifiedTypeName name="exercise.FibonacciCalculator"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="drills.Drill01"/>
+<fullyQualifiedTypeName name="java.lang.NegativeArraySizeException"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="enums.RainbowColor"/>
+<fullyQualifiedTypeName name="enums.RPS"/>
+<fullyQualifiedTypeName name="lib.ConsoleIO"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>18</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>684</x>
+      <y>144</y>
+      <w>594</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>ClassName
+--
+**data members
+_- varName : type_
+
+--
+**functional members
+_+ methodName(paramName : type, ...) : returnType_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>684</x>
+      <y>378</y>
+      <w>594</w>
+      <h>306</h>
+    </coordinates>
+    <panel_attributes>Cat
+--
+_- isCute : boolean_
+_- name : String_
+_- furColor : String_
+_- age : int_
+
+--
+_+ annoy(target : String) : boolean_
+_+ kill(target : String) : int_
+_+ sleep() : void_</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

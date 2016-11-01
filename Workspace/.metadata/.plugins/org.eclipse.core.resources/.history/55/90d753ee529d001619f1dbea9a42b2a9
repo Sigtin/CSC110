@@ -1,0 +1,33 @@
+package models;
+
+public class Movie {
+
+	private String title;
+	private int year;
+	private static int movieCount = 0;
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+	
+	public void instanceVsStaticDemo() {
+		movieCount++;
+	}
+	
+	public static void staticVsInstanceDemo() {
+		movieCount++;
+
+	}
+}

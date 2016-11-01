@@ -1,0 +1,12 @@
+package tester;
+
+import lib.ConsoleIO;
+
+public class Tester {
+
+	public static void main(String[] args) {
+		ConsoleIO.promptForChar("Please enter a character: ", Character.MIN_VALUE, Character.MAX_VALUE);
+
+	}
+
+}

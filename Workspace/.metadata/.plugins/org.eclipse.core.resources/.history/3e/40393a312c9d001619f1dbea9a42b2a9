@@ -1,0 +1,20 @@
+package game;
+
+import java.util.Random;
+
+import enums.RPS;
+
+public class App {
+	public static void run() {
+		boolean isValid = true;
+		do {
+			Random rand = new Random();
+			int i = rand.nextInt(3);
+			RPS guess = RPS.values()[i];
+			
+			if()
+		} while (condition);
+
+	}
+
+}

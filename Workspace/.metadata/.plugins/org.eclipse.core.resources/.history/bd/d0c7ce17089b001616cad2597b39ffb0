@@ -1,0 +1,12 @@
+package tester;
+
+import lib.ConsoleIO;
+
+public class Tester {
+
+	public static void main(String[] args) {
+		ConsoleIO.promptForByte("Please enter a number: ", -128, 127);
+
+	}
+
+}
