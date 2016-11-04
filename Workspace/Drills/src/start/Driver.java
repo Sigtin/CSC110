@@ -1,13 +1,11 @@
 package start;
 
-import drills.Drill01;
+import drills.Drill02;
 
 public class Driver {
 
 	public static void main(String[] args) {
-		
-	String underscore = Drill01.underscore("I have so many outstanding vowels");
-	System.out.println(underscore);
+	Drill02.run();
 
 	}
 

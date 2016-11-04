@@ -3,6 +3,8 @@ package enums;
 public enum RPS {
 	ROCK,
 	PAPER,
-	SCISSORS
+	SCISSORS,
+	LIZARD,
+	SPOCK
 
 }

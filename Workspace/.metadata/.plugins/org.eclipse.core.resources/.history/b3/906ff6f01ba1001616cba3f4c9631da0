@@ -1,0 +1,12 @@
+package game;
+
+import lib.ConsoleIO;
+
+public class Player {
+	private String playerName;
+	public String playerName() {
+		playerName = ConsoleIO.promptForInput("Please enter your name: ", false);
+		return playerName;
+	}
+
+}
