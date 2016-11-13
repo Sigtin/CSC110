@@ -27,8 +27,10 @@ public class ScratchClass {
 	}
 
 	public static void main(String[] args) {
-		String modifiedMessage = run("Hello", 'l');
-		System.out.println(modifiedMessage);
+//		String modifiedMessage = run("Hello", 'l');
+//		System.out.println(modifiedMessage);
+		
+		PracticeProblems.practiceProblemOne(17, 10, 5);
 
 		/*
 		 * Data types

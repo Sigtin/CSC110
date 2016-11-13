@@ -1,0 +1,10 @@
+package deckDemoApp;
+
+import deckDemoEnums.DeckDemoCardSuits;
+
+public class DeckDemoCard {
+	
+	private final DeckDemoCardSuits cardSuit = ;
+	
+
+}

@@ -4,12 +4,12 @@ INDEX VERSION 1.129+C:\Users\Austin Sigler\Desktop\Neumont\CSC110\Workspace\.met
 1768237448.index
 3128008929.index
 2927524569.index
+830512563.index
 2045551946.index
-480989628.index
-2039266335.index
 1004716384.index
 2273233090.index
 375126478.index
+3657208825.index
 486699731.index
 4084348409.index
 3984250477.index
@@ -28,7 +28,9 @@ INDEX VERSION 1.129+C:\Users\Austin Sigler\Desktop\Neumont\CSC110\Workspace\.met
 188619105.index
 452186761.index
 1347898029.index
+625448091.index
 3533666573.index
 3892794692.index
+2551454314.index
 3172068124.index
 1583927216.index

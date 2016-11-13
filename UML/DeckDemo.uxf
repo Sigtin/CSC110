@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>20</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>40</y>
+      <w>260</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>CardSuits &lt;&lt;enum&gt;&gt;
+--
+SPADES,
+HEARTS,
+DIAMONDS,
+CLUBS</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>280</y>
+      <w>280</w>
+      <h>480</h>
+    </coordinates>
+    <panel_attributes>CardValues &lt;&lt;enum&gt;&gt;
+--
+ACE,
+TWO,
+THREE,
+FOUR,
+FIVE,
+SIX,
+SEVEN,
+EIGHT,
+NINE,
+TEN,
+JACK,
+QUEEN,
+KING</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1080</x>
+      <y>260</y>
+      <w>520</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>Deck
+--
+cards : Card[ ]
+
+--
++ shuffle() : void
++ printDeck() : void
++ dealCards(cardsDealt : int) : Card[ ]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>520</x>
+      <y>100</y>
+      <w>520</w>
+      <h>400</h>
+    </coordinates>
+    <panel_attributes>Card
+--
+- cardSuit : Suit &lt;&lt;const&gt;&gt;
+- cardValue : Value &lt;&lt;const&gt;&gt;
+--
++ getCardSuit() : Suit
++ getCardValue() : Value
+
++ Card(Suit, Value) &lt;&lt;ctor&gt;&gt;
+
+@Override
++ toString() : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1480</x>
+      <y>60</y>
+      <w>260</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>DeckDemoDriver
+--
+_+ main() : void_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>140</y>
+      <w>160</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>180</y>
+      <w>140</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1020</x>
+      <y>200</y>
+      <w>100</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>30.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1700</x>
+      <y>340</y>
+      <w>200</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>App
+--
+_+ Run() : void_</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

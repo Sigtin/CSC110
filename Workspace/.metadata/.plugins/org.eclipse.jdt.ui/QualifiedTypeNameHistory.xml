@@ -10,6 +10,9 @@
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="enums.RainbowColor"/>
 <fullyQualifiedTypeName name="enums.RPS"/>
-<fullyQualifiedTypeName name="lib.ConsoleIO"/>
 <fullyQualifiedTypeName name="drills.Drill02"/>
+<fullyQualifiedTypeName name="deckDemoEnums.DeckDemoCardSuits"/>
+<fullyQualifiedTypeName name="deckDemoEnums.DeckDemoCardValues"/>
+<fullyQualifiedTypeName name="drills.Drill03"/>
+<fullyQualifiedTypeName name="lib.ConsoleIO"/>
 </qualifiedTypeNameHistroy>

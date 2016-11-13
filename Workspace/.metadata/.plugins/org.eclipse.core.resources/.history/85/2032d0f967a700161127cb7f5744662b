@@ -1,0 +1,30 @@
+package deckDemoApp;
+
+import deckDemoEnums.DeckDemoCardSuits;
+import deckDemoEnums.DeckDemoCardValues;
+
+public class DeckDemoCard {
+
+	private final DeckDemoCardSuits cardSuit;
+	private final DeckDemoCardValues cardValue;
+
+	public DeckDemoCard(DeckDemoCardSuits cardSuit, DeckDemoCardValues cardValue) {
+		
+	}
+	
+	public DeckDemoCardSuits getCardSuit() {
+		return cardSuit;
+	}
+
+	public DeckDemoCardValues getCardValue() {
+		return cardValue;
+	}
+	
+	@Override
+	public String toString() {
+		// Return a String in the format: Suit " of " Value
+		String retVal = getCardValue() + " of " + getCardSuit();
+
+		return retVal;
+	}
+}

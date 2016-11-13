@@ -1,0 +1,17 @@
+package start;
+
+import drills.Drill03;
+
+public class Driver {
+
+	public static void main(String[] args) {
+		String[] strings = new String[] {
+			"Hello",
+			"Hi",
+			"Yo",
+			"Bye"
+		};
+		Drill03.print(strings);
+	}
+
+}
