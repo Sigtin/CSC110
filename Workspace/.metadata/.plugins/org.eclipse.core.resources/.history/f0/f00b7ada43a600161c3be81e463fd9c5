@@ -1,9 +1,0 @@
-package deckDemoEnums;
-
-public enum DeckDemoCardSuits {
-	SPADES,
-	HEARTS,
-	DIAMONDS,
-	CLUBS
-
-}

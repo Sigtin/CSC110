@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2">
-  <zoom_level>20</zoom_level>
+  <zoom_level>15</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>300</x>
-      <y>440</y>
-      <w>220</w>
-      <h>200</h>
+      <x>225</x>
+      <y>210</y>
+      <w>165</w>
+      <h>150</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enum&gt;&gt;
 DieType
@@ -20,10 +20,10 @@ GREEN</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>640</x>
-      <y>440</y>
-      <w>780</w>
-      <h>440</h>
+      <x>480</x>
+      <y>210</y>
+      <w>585</w>
+      <h>330</h>
     </coordinates>
     <panel_attributes>Die
 --
@@ -44,22 +44,37 @@ _+ getNumOfSides() : int_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>980</x>
-      <y>960</y>
-      <w>240</w>
-      <h>200</h>
+      <x>1260</x>
+      <y>615</y>
+      <w>315</w>
+      <h>450</h>
     </coordinates>
     <panel_attributes>Player
---</panel_attributes>
+--
+- name : String &lt;&lt;const&gt;&gt;
+- brains : int
+- blasts : int
+- score : int
+--
++ Player(name : String)
++ getName() : String
++ getBrains() : int
++ setBrains(brains : int) : void
++ getBlasts() : int
++ setBlasts(blasts : int) : void
++ getScore() : int
++ setScore(score : int) : void
+
++ toString() : String &lt;&lt;Override&gt;&gt;</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>300</x>
-      <y>180</y>
-      <w>380</w>
-      <h>200</h>
+      <x>225</x>
+      <y>15</y>
+      <w>285</w>
+      <h>150</h>
     </coordinates>
     <panel_attributes>Driver
 --
@@ -71,12 +86,25 @@ _+main(args : String[]) : void_</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>300</x>
-      <y>960</y>
-      <w>240</w>
-      <h>200</h>
+      <x>435</x>
+      <y>615</y>
+      <w>165</w>
+      <h>105</h>
     </coordinates>
     <panel_attributes>Cup
+--
+_+ getDie() : Die_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>615</y>
+      <w>465</w>
+      <h>465</h>
+    </coordinates>
+    <panel_attributes>GameLogic
 --
 </panel_attributes>
     <additional_attributes/>
@@ -84,22 +112,10 @@ _+main(args : String[]) : void_</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>640</x>
-      <y>960</y>
-      <w>240</w>
-      <h>200</h>
-    </coordinates>
-    <panel_attributes>GameLogic
---</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>300</x>
-      <y>680</y>
-      <w>220</w>
-      <h>200</h>
+      <x>225</x>
+      <y>390</y>
+      <w>165</w>
+      <h>150</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enum&gt;&gt;
 DieFace
@@ -112,10 +128,10 @@ BRAIN</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>500</x>
-      <y>440</y>
-      <w>180</w>
-      <h>60</h>
+      <x>375</x>
+      <y>210</y>
+      <w>135</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
@@ -123,12 +139,45 @@ BRAIN</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>500</x>
-      <y>740</y>
-      <w>180</w>
-      <h>60</h>
+      <x>375</x>
+      <y>435</y>
+      <w>135</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>525</x>
+      <y>525</y>
+      <w>45</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>585</x>
+      <y>675</y>
+      <w>105</w>
+      <h>195</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>50.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1110</x>
+      <y>780</y>
+      <w>180</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
   </element>
 </diagram>

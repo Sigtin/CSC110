@@ -1,0 +1,122 @@
+package hang;
+
+import lib.ConsoleIO;
+
+public class HangmanApp {
+
+	public static String userInput;
+	public static String[] userInputArray;
+	public static String letters = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
+	public static char[] charLetters;
+	public static char[] newChar;
+	public static int wrongGuess;
+	public static char[] lettersGuessed;
+	public static String guessed = "";
+
+	public static void prompt() {
+		boolean isValid = true;
+		do {
+			userInput = ConsoleIO.promptForInput(
+					"Please enter the word(s), up to eight, you wish to be made into a puzzle: ", false);
+			userInputArray = userInput.split(" ");
+
+			if (userInputArray.length > 8) {
+				isValid = false;
+				System.out.println("You entered too many words");
+			} else {
+				isValid = true;
+			}
+		} while (!isValid);
+	}
+
+	public static void printGallows() {
+		if (wrongGuess == 0) {
+			System.out.println("    _____ \n    |   | \n    |    \n    |\n    |\n    |\n ___|___");
+		}
+		if (wrongGuess == 1) {
+			System.out.println("    _____ \n    |   | \n    |   O\n    |\n    |\n    |\n ___|___");
+		}
+		if (wrongGuess == 2) {
+			System.out.println("    _____ \n    |   | \n    |   O\n    |  |\n    |\n    |\n ___|___");
+		}
+		if (wrongGuess == 3) {
+			System.out.println("    _____ \n    |   | \n    |   O\n    |  \\|\n    |\n    |\n ___|___");
+		}
+		if (wrongGuess == 4) {
+			System.out.println("    _____ \n    |   | \n    |   O\n    |  \\|/\n    |   |\n    |\n ___|___");
+		}
+		if (wrongGuess == 5) {
+			System.out.println("    _____ \n    |   | \n    |   O\n    |  \\|/\n    | __|\n    |\n ___|___");
+		}
+		if (wrongGuess == 6) {
+			System.out.println("    _____ \n    |   | \n    |   O\n    |  \\|/\n    | __|__\n    |\n ___|___");
+		}
+
+	}
+
+	public static void replaceLetters() {
+		newChar = userInput.toCharArray();
+		for (int i = 0; i < newChar.length; i++) {
+			if (newChar[i] != ' ') {
+				newChar[i] = '_';
+			}
+		}
+	}
+	
+	public static void printPuzzle() {
+		for (int i = 0; i < newChar.length; i++) {
+			if (newChar[i] != ' ') {
+				System.out.print(newChar[i] + " ");
+			}
+			if (newChar[i] == ' ') {
+				System.out.println(newChar[i] + " ");
+			}
+		}
+	}
+	
+	public static void lettersGuessed() {
+		lettersGuessed = new char[26];
+		for(int i = 0; i < lettersGuessed.length; i++){
+			lettersGuessed[i] = ' ';
+		}
+		System.out.println("\nLetters Guessed: ");
+		char charGuessed = ConsoleIO.promptForChar("\nPlease enter a letter: ", 'A', 'z');
+		boolean containsLetter = false;
+		for(int i = 0; i < lettersGuessed.length; i++) {
+			if(lettersGuessed[i] == charGuessed) {
+				containsLetter = true;
+				i = lettersGuessed.length;
+			}
+		}
+		
+		if(containsLetter == true) {
+			System.out.println("You've already entered that letter");
+		} else {
+			for(int i = 0; i < lettersGuessed.length; i++) {
+				if(lettersGuessed[i] == ' ') {
+					lettersGuessed[i] = charGuessed;
+					checkLetter(charGuessed);
+					i = lettersGuessed.length;
+				}
+			}
+			for(int i = 0; i < lettersGuessed.length; i++) {
+				System.out.print(lettersGuessed[i] + ' ');
+			}
+		}
+	}
+	
+	public static void checkLetter(char c) {
+		String guess = Character.toString(c);
+		if(userInput.toLowerCase().contains(guess.toLowerCase())){
+			for(int i = 0; i < userInput.length(); i++) {
+				if(userInput.toLowerCase().charAt(i) == c) {
+					newChar[i] = userInput.charAt(i);
+				}
+			}
+		} else {
+			System.out.println("The letter you guessed is not correct");
+			wrongGuess++;
+		}
+	}
+
+}

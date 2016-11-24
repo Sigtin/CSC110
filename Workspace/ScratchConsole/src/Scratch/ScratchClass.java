@@ -3,6 +3,8 @@ package Scratch;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+import models.Student;
+
 public class ScratchClass {
 
 	private static BufferedReader readRacer = new BufferedReader(new InputStreamReader(System.in));
@@ -30,7 +32,6 @@ public class ScratchClass {
 //		String modifiedMessage = run("Hello", 'l');
 //		System.out.println(modifiedMessage);
 		
-		PracticeProblems.practiceProblemOne(17, 10, 5);
 
 		/*
 		 * Data types

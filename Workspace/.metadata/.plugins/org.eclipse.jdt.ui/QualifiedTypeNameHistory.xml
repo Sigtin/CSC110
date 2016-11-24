@@ -6,7 +6,6 @@
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="drills.Drill01"/>
 <fullyQualifiedTypeName name="java.lang.NegativeArraySizeException"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="enums.RainbowColor"/>
 <fullyQualifiedTypeName name="enums.RPS"/>
@@ -14,5 +13,10 @@
 <fullyQualifiedTypeName name="deckDemoEnums.DeckDemoCardSuits"/>
 <fullyQualifiedTypeName name="deckDemoEnums.DeckDemoCardValues"/>
 <fullyQualifiedTypeName name="drills.Drill03"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="enums.ZombieDiceDieType"/>
+<fullyQualifiedTypeName name="drills.Employee"/>
+<fullyQualifiedTypeName name="models.ZombieDiceCup"/>
 <fullyQualifiedTypeName name="lib.ConsoleIO"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>

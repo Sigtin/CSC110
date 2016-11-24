@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>15</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>45</x>
+      <y>120</y>
+      <w>315</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Driver
+--
+_+ main(args : String[]) : void_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>225</y>
+      <w>150</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>ConsoleIO
+&lt;&lt;library&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1095</x>
+      <y>105</y>
+      <w>360</w>
+      <h>435</h>
+    </coordinates>
+    <panel_attributes>GameMaster
+--
+- diceBag : DiceBag
+- hero : Hero
+--
++ run() : void
+- createHero() : Hero
+- rollAttribute() : int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>105</y>
+      <w>600</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>DiceBag
+--
+
+--
++ rollDice(numOfDice : int, numOfSides : int, modifier : int) : int
++ rollDice(numOfDice : int, numOfSides : int) : int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>270</y>
+      <w>360</w>
+      <h>225</h>
+    </coordinates>
+    <panel_attributes>Die
+--
+- numOfSides : int &lt;&lt;const&gt;&gt;
+- currentValue : int
+--
++ Die(numOfSides : int) &lt;&lt;ctor&gt;&gt;
++ roll() : int
++ getCurrentValue() : int
++ getNumOfSides() : int
++ toString() : String &lt;&lt;override&gt;&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1560</x>
+      <y>105</y>
+      <w>495</w>
+      <h>1110</h>
+    </coordinates>
+    <panel_attributes>Hero
+--
+- name : String
+- strength : int
+- dexterity : int
+- intelligence : int
+- damageBonus : int
+- strikeBonus : int
+- dodgeBonus : int
+- spellStrengthBonus : int
+- baseHP : int
+- currentHP : int
+- baseMana : int
+- currentMana : int
+--
++ Hero() &lt;&lt;ctor&gt;&gt;
++ Hero(str : int, dex : int, intel : int) &lt;&lt;ctor&gt;&gt;
++ updateDamageBonus() : void
++ updateStrikeBonus() : void
++ updateDodgeBonus() : void
++ updateSpellStrengthBonus() : void
++ getName() : String
++ setName(name : String) : void
++ getStrength() : int
++ setStrength(strength : int) : void
++ getDexterity() : int
++ setDexterity(dexterity : int) : void
++ getIntelligence() : int
++ setIntelligence(intelligence : int) : void
++ getDamageBonus() : int
++ setDamageBonus(damageBonus : int) : void
++ getStrikeBonus() : int
++ setStrikeBonus(strikeBonus : int) : void
++ getDodgeBonus() : int
++ setDodgeBonus(dodgeBonus : int) : void
++ getSpellStrengthBonus() : int
++ setSpellStrengthBonus(spellStrengthBonus : int) : void
++ getBaseHP() : int
++ setBaseHP(baseHP : int) : void
++ getCurrentHP() : int
++ setCurrentHP(currentHP : int) : void
++ getBaseMana() : int
++ setBaseMana(baseMana : int) : void
++ getCurrentMana() : int
++ setCurrentMana(currentMana : int) : void
+
++ toString() : String &lt;&lt;override&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1005</x>
+      <y>135</y>
+      <w>120</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1440</x>
+      <y>135</y>
+      <w>150</w>
+      <h>255</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;150.0;80.0;10.0</additional_attributes>
+  </element>
+</diagram>

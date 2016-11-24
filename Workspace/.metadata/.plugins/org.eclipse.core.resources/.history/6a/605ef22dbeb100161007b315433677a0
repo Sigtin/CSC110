@@ -1,0 +1,14 @@
+package hang;
+
+public class HangmanDriver {
+
+	public static void main(String[] args) {
+		HangmanApp.prompt();
+		while(true){
+		HangmanApp.printGallows();
+		HangmanApp.replaceLetters();
+		HangmanApp.lettersGuessed();
+		}
+	}
+
+}

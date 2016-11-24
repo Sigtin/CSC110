@@ -1,0 +1,8 @@
+package hang;
+
+public class HangmanDriver {
+
+	public static void main(String[] args) {
+		HangmanApp.run();
+		}
+	}

@@ -1,0 +1,122 @@
+package app;
+
+import enums.ZombieDiceDieFace;
+import lib.ConsoleIO;
+import models.ZombieDiceCup;
+import models.ZombieDiceDie;
+import models.ZombieDicePlayer;
+
+public class ZombieDiceRun {
+
+	static ZombieDicePlayer p1 = new ZombieDicePlayer();
+
+	static ZombieDicePlayer p2 = new ZombieDicePlayer();
+
+	public static void prompt() {
+		String playerOneInput = ConsoleIO.promptForInput("Player One, please enter your name: ", true);
+		if (playerOneInput.isEmpty()) {
+			p1.setPlayerName("Player1");
+		} else {
+			p1.setPlayerName(playerOneInput);
+		}
+
+		String playerTwoInput = ConsoleIO.promptForInput("Player Two, please enter your name: ", true);
+		if (playerTwoInput.isEmpty()) {
+			p2.setPlayerName("Player2");
+		} else {
+			p2.setPlayerName(playerTwoInput);
+		}
+
+		System.out.println(
+				"Thank you, " + p1.getPlayerName() + " and " + p2.getPlayerName() + ", for playing Zombie Dice");
+
+	}
+
+	public static void playerTurn(ZombieDicePlayer player) {
+		int survivorsCornered = 0;
+		int shotsFired = 0;
+		boolean isLooping = true;
+		boolean isAsking = true;
+		do {
+			String name = player.getPlayerName();
+			System.out.println(name);
+			
+			ZombieDiceDie[] dice = new ZombieDiceDie[3];
+			
+			for(int i = 0; i < dice.length; i++) {
+				dice[i] = ZombieDiceCup.getDie();
+				dice[i].rollDie();
+				System.out.println(dice[i].toString());
+				if (dice[i].getCurrentDieFace() == ZombieDiceDieFace.BRAIN) {
+					survivorsCornered++;
+				}
+
+				if (dice[i].getCurrentDieFace() == ZombieDiceDieFace.BLAST) {
+					shotsFired++;
+				}
+			}
+
+			if (shotsFired >= 3) {
+				System.out.println("You are a terrible zombie" + "\n" + "All of the survivors fought back and escaped");
+				isLooping = false;
+				isAsking = false;
+			}
+
+			while (isAsking) {
+				String[] options = new String[] { "Continue Rolling", "Stop to eat the brains" };
+				int userInput = ConsoleIO.promptForMenuSelection(options, false);
+				if (userInput == 1) {
+					System.out.println("You really want to keep rolling?");
+
+					for(int i = 0; i < dice.length; i++) {
+						if (dice[i].getCurrentDieFace() == ZombieDiceDieFace.ESCAPE) {
+							dice[i].rollDie();
+							System.out.println(dice[i].toString());
+						} 
+						
+						if (dice[i].getCurrentDieFace() != ZombieDiceDieFace.ESCAPE) {
+							dice[i] = ZombieDiceCup.getDie();
+							dice[i].rollDie();
+							System.out.println(dice[i].toString());
+							if (dice[i].getCurrentDieFace() == ZombieDiceDieFace.BRAIN) {
+								survivorsCornered++;
+							}
+
+							if (dice[i].getCurrentDieFace() == ZombieDiceDieFace.BLAST) {
+								shotsFired++;
+							}
+						}
+						
+					}
+
+				} else {
+					System.out.println("You ate " + survivorsCornered + " brains and gained their powers"
+							+ "\nToo bad the powers you gained don't help you in this game");
+					player.setScore(survivorsCornered);
+					isLooping = false;
+					isAsking = false;
+				}
+				if (player.getScore() >= 13) {
+					System.out.println(player.getPlayerName() + " wins!!!");
+					System.out.println("Thanks for playing ZombieDice");
+					System.exit(0);
+				}
+			}
+
+		} while (isLooping);
+
+	}
+
+	public static void run() {
+		prompt();
+		boolean turnLoops = true;
+		if (p1.getScore() >= 13 || p2.getScore() >= 13) {
+			turnLoops = false;
+		}
+
+		do {
+			playerTurn(p1);
+			playerTurn(p2);
+		} while (turnLoops);
+	}
+}

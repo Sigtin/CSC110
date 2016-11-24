@@ -92,8 +92,10 @@ public class ConsoleIO {
 				System.out.print(prompt);
 			}
 			if (userInput.equalsIgnoreCase(trueString)) {
+				isTrue = true;
 				isValid = true;
 			} else if (userInput.equalsIgnoreCase(falseString)) {
+				isTrue = false;
 				isValid = true;
 			} else {
 				isValid = false;

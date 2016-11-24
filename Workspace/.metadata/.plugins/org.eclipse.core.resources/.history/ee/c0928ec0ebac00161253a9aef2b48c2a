@@ -1,0 +1,85 @@
+package models;
+
+import java.util.Random;
+
+import enums.ZombieDiceDieFace;
+import enums.ZombieDiceDieType;
+
+public class ZombieDiceDie {
+	
+	private static final int numOfSides = 6;
+	private ZombieDiceDieType color;
+	private ZombieDiceDieFace currentDieFace;
+	
+	//Make an array that has all the possible die faces
+		//Depending on the color of the die
+	
+	private ZombieDiceDieFace[] faces;
+	
+	public ZombieDiceDie(ZombieDiceDieType color) {
+		
+		if(color == ZombieDiceDieType.GREEN) {
+			faces = new ZombieDiceDieFace[]{
+				ZombieDiceDieFace.BRAIN,
+				ZombieDiceDieFace.BRAIN,
+				ZombieDiceDieFace.BRAIN,
+				ZombieDiceDieFace.ESCAPE,
+				ZombieDiceDieFace.ESCAPE,
+				ZombieDiceDieFace.BLAST
+			};
+		} else if (color == ZombieDiceDieType.YELLOW) {
+			faces = new ZombieDiceDieFace[]{
+					ZombieDiceDieFace.BRAIN,
+					ZombieDiceDieFace.BRAIN,
+					ZombieDiceDieFace.ESCAPE,
+					ZombieDiceDieFace.ESCAPE,
+					ZombieDiceDieFace.BLAST,
+					ZombieDiceDieFace.BLAST
+				};
+		} else {
+			faces = new ZombieDiceDieFace[]{
+					ZombieDiceDieFace.BRAIN,
+					ZombieDiceDieFace.ESCAPE,
+					ZombieDiceDieFace.ESCAPE,
+					ZombieDiceDieFace.BLAST,
+					ZombieDiceDieFace.BLAST,
+					ZombieDiceDieFace.BLAST
+				};
+		}
+	}
+	
+	public static int getNumOfSides() {
+		return numOfSides;
+	}
+	
+	public ZombieDiceDieType getColor() {
+		return color;
+	}
+	
+	public ZombieDiceDieFace getCurrentDieFace() {
+		return currentDieFace;
+	}
+	
+	public void setCurrentDieFace(ZombieDiceDieFace currentDieFace) {
+		this.currentDieFace = currentDieFace;
+	}
+	
+	
+	public void rollDie() {
+		Random rand = new Random();
+		int randNum = rand.nextInt(numOfSides);
+		ZombieDiceDieFace die = faces[randNum];
+		currentDieFace = die;
+	}
+	
+	
+	
+	//Override the toString to be "Color" + ": " + "currentDieFace"
+	@Override
+	public String toString() {
+		String retVal = getColor() + ": " + getCurrentDieFace();
+		
+		return retVal;
+	}
+
+}
